@@ -1,0 +1,38 @@
+{
+  "name": "cryptonote-address-validator",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "babel-node src/index.js",
+    "build": "webpack --mode=production"
+  },
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "keccak": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}
